@@ -1,0 +1,48 @@
+@import '../../styles/variables.scss';
+
+.buttons{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    button{
+       padding-top: 1px;
+        color: $blue;
+    }
+}
+.active{
+    background-color: $green;
+    color: $white !important ;
+ }
+.disabled {
+   pointer-events: none;
+   color: gray !important;
+}
+.btnNumber{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    @media (max-width: 640px) {
+        display: none;
+    }
+
+    button{
+        cursor: auto;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid $blue;
+    }
+}
+.numberOf{
+    display: none;
+
+    @media (max-width: 640px) {
+        display: block;
+    }
+}

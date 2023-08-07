@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+@import './null.scss';
+@import './variables.scss';
+@import './vars.scss';
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    max-width: var(--maxWidthContainer);
+    margin: 0 auto;
+    padding: 15px;
+
+    @media (max-width: $md1) {
+        max-width: 904px;
+    }
+    @media (max-width: $md2) {
+        max-width: 704px;
+    }
+    @media (max-width: $md3) {
+        max-width: 328px;
+        padding: 0;
+    }
+}
+.main{
+    flex: 1 1 auto;
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+.dark{
+    background-color: $darkFray;
+    color:$white;
+    button{
+        color: $white;
+        background-color: $darkFray;
+        transition: all .5s ease;
+        &:hover {
+            color: $white;
+            background-color: gray;
+        }
+    }
+    .card{
+        background-color: gray;
+    }
+}
