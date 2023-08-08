@@ -20,7 +20,7 @@ export const Cart = () => {
       <h2 className={styles.title}>No added any products</h2>
       :
       <>
-      <div className='cards'>
+      <div className={`${styles.cards}`}>
          {cart?.map(item => <CartItem key={item.id} {...item} />)}
       </div>
       <p className={styles.totalPrice}>total price: ${totalPrice}</p>
